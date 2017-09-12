@@ -18,6 +18,7 @@ class Book {
    * 
    *   Methods of author:
    *     this.author.equals()  -- boolean
+   *     this.author.pubLater() -- boolean
    */
   
   // Book -> boolean
@@ -40,5 +41,27 @@ class Book {
   // TODO design a function publishedBefore that accepts a Book and
   //   returns true if this Book was published before the other 
   
+  //Book--->boolean
+  //check if this book was published later than that book
+  /* boolean pubLater(Person other){
+   *   return 0;
+   * }
+  */
   
+  /*Template
+   *   Fields:
+   *     ...this.year...->
+   *     ...this.title...->
+   * 
+   *   Methods:
+   * 
+   */
+  
+  boolean pubLater(Book other) {
+     if (this.year < other.year) {
+       return true;
+     }else {
+       return false;
+     }
+   }
 }

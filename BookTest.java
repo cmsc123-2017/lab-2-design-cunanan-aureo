@@ -25,4 +25,16 @@ public class BookTest extends TestCase {
     
     assertEquals(true, secrets.sameAuthor(stone));
   }
+  
+  public void testPubLater(){
+    Author hawking = new Author("Stephen Hawking", "M");
+    Author rowling = new Author("J.K. Rowling", "F");
+    
+    Book time = new Book(hawking, "A Brief History of Time", 1988);
+    Book stone = new Book(rowling, "The Philosophers's Stone",  1997);
+    Book secrets = new Book(rowling, "The Chamber of Secrets", 1998);
+    
+    assertEquals(true, time.pubLater(stone));
+    assertEquals(false, secrets.pubLater(stone));
+  }
 }
